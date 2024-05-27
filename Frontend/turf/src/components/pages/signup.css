@@ -1,0 +1,86 @@
+/* Signup-user.css */
+
+.signup-background {
+    background-image: url('https://media.hudle.in/photos/47296');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+  }
+  
+  
+  .signup-box {
+    background-image: url('https://media.hudle.in/photos/47296'); /* Background image */
+    background-size: cover; /* Ensure the background image covers the entire box */
+    background-position: center; /* Center the background image */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 20px; /* Padding inside the signup box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    text-align: center; /* Center align the content */
+    max-width: 400px; /* Maximum width of the signup box */
+    width: 100%; /* Take up the full width of the container */
+  }
+  
+  
+  
+  .signup-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  

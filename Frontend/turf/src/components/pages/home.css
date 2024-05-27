@@ -1,0 +1,118 @@
+/* home.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f0f2f5;
+  }
+  
+  /* General container for the home page */
+  .home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('https://example.com/your-background-image.jpg') no-repeat center center fixed; /* Change to your image URL */
+    background-size: cover;
+  }
+  
+  /* Navigation bar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Container for the benefits section */
+  .benefits-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .benefits-paragraph {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: white; /* Adjust text color for better visibility on the background */
+  }
+  
+  .cards-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .card-image {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .book-now-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .book-now-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .book-now-button:active {
+    background-color: #004085;
+    transform: translateY(0);
+  }
+  
+  .back {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  

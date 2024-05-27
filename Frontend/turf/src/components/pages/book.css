@@ -1,0 +1,75 @@
+/* book.css */
+
+.booking-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.booking-details-container h1 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.booking-card {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.booking-card p {
+  margin: 10px 0;
+  color: #495057;
+}
+
+.booking-card p strong {
+  color: #007bff;
+}
+.background {
+  background-color: #0e3d02;
+  padding: 20px 0;
+}
+.home-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.home-button-container a {
+  text-decoration: none;
+}
+
+.home-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.home-button:active {
+  background-color: #004085;
+  transform: translateY(0);
+}
