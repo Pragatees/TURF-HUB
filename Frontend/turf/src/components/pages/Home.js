@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <nav className="navbar">
-        <h1 className="navbar-brand">Truf Booking</h1>
+        <h1 className="navbar-brand">Truf Hub</h1>
         <ul className="navbar-links">
           <li>
             <Link to="/profile">
@@ -17,14 +17,14 @@ const Home = () => {
             <Link to="/booking-details">My Bookings</Link>
           </li>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/aboutus">About Us</Link>
           </li>
         </ul>
       </nav>
       <div className="benefits-container">
         <div className="back">
           <div id="header">
-            <h1 className="h1">Truf Booking</h1>
+            <h1 className="h1">Truf Hub</h1>
           </div>
           <p className="benefits-paragraph">
             Turf cricket offers numerous benefits, including a consistent playing surface, reduced risk of injury, and all-weather playability. It provides a professional playing experience with less maintenance compared to natural grass, making it ideal for players of all levels.
@@ -42,7 +42,7 @@ const Home = () => {
               <img src="https://media.hudle.in/photos/12345" alt="Football" className="card-image" />
               <h3>Football</h3>
               <p>Play football on our premium turf field, designed to provide optimal performance and safety for players.</p>
-              <Link to="/football">
+              <Link to="/cricket">
                 <button className="book-now-button">See More...!</button>
               </Link>
             </div>

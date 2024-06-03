@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './slotchoose.css'; // Import your CSS file for styling
+import './slotchoose.css';
 
-const Cricslot = ({ name }) => {
+const Cricslot = (props) => {
+  const { name, image } = props.location.state || {}; // Retrieve the name and image from props.location.state
   const [teamName, setTeamName] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
-  const [selectedSport, setSelectedSport] = useState('cricket'); // Default selection is cricket
-  const [selectedPaymentMode, setSelectedPaymentMode] = useState(''); // State for payment mode
-  const [error, setError] = useState(''); // State for error handling
+  const [error, setError] = useState('');
 
   const handleTeamNameChange = (e) => {
     setTeamName(e.target.value);
@@ -22,17 +21,9 @@ const Cricslot = ({ name }) => {
     setSelectedTime(time);
   };
 
-  const handleSportSelection = (sport) => {
-    setSelectedSport(sport);
-  };
-
-  const handlePaymentModeChange = (e) => {
-    setSelectedPaymentMode(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const username = localStorage.getItem('username'); // Retrieve username from localStorage
+    const username = localStorage.getItem('username');
 
     if (!username) {
       setError('Username not found in local storage.');
@@ -44,20 +35,24 @@ const Cricslot = ({ name }) => {
       teamName,
       selectedDate,
       selectedTime,
+      name,  
+      image  
     })
     .then(response => {
       alert("Booking Confirmed");
+      window.location.href = "/booking-details";
     })
     .catch(error => {
       console.error('There was an error making the booking:', error);
-      setError('An error occurred while making the booking.'); // Set error message
+      setError('An error occurred while making the booking.');
     });
   };
 
   return (
     <div className="cricslot-container">
-      <h3>{name}</h3> {/* Display the name passed as prop here */}
-      {error && <div className="error">{error}</div>} {/* Display error message if any */}
+      <h3>{name}</h3>
+      {image && <img src={image} alt={name} />} {/* Display the image */}
+      {error && <div className="error">{error}</div>}
       <div className="input-box">
         <label htmlFor="teamName">Team Name:</label>
         <input
@@ -96,8 +91,7 @@ const Cricslot = ({ name }) => {
             <input
               type="radio"
               value="gpay"
-              checked={selectedPaymentMode === 'gpay'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             GPay
           </label>
@@ -105,8 +99,7 @@ const Cricslot = ({ name }) => {
             <input
               type="radio"
               value="phonepe"
-              checked={selectedPaymentMode === 'phonepe'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             PhonePe
           </label>
@@ -114,8 +107,7 @@ const Cricslot = ({ name }) => {
             <input
               type="radio"
               value="paytm"
-              checked={selectedPaymentMode === 'paytm'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             Paytm
           </label>

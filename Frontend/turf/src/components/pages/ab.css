@@ -1,0 +1,34 @@
+/* AboutUs.css */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-content {
+    line-height: 1.6;
+  }
+  
+  .about-content p {
+    margin-bottom: 20px;
+  }
+  
+  /* Add animation for a subtle hover effect */
+  .about-content p:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+#sidebar {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    float: left;
+    padding-top: 20px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #555;
+}
+
+#sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#sidebar li:hover {
+    background-color: #555;
+}
+
+#header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#middle {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Each row contains cards with minimum width 300px */
+    gap: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; /* Needed for absolute positioning of description */
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Enlarge image on hover */
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.card:hover .description {
+    opacity: 1; /* Show description on hover */
+}
+
+.book-now-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.book-now-btn:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.search-box {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: calc(100% - 240px); /* Adjust width considering the sidebar width */
+}

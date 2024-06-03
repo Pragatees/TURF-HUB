@@ -11,7 +11,7 @@ import footslot from './components/pages/footslot';
 import BookingDetails from './components/pages/BookingDetails';
 import bookingfoot from './components/pages/Bookingfoot';
 import prof from './components/pages/profile';
-
+import aboutus from './components/pages/aboutus';
 function App() {
   return (
     <Router>
@@ -27,6 +27,7 @@ function App() {
             <Route path="/booking-details" component={BookingDetails} />a
             <Route path = "/bookfoot" component = {bookingfoot}/>
             <Route path = "/profile" component = {prof}/>a
+            <Route path = '/aboutus' component={aboutus}/>a
         </Switch>
     </div>
 </Router>

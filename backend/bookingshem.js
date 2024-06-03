@@ -6,6 +6,8 @@ const bookingSchema = new mongoose.Schema({
   teamName: { type: String, required: true },
   date: { type: String, required: true },
   time: { type: String, required: true },
+  name: { type: String, required: true }, // Add name field
+  image: { type: String, required: true }, // Add image field
   createdAt: { 
     type: Date, 
     default: Date.now, 

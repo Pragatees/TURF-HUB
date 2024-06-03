@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './book.css';
 
@@ -37,17 +37,21 @@ const BookingDetails = () => {
 
   return (
     <div className="background">
-      
       <div className="booking-details-container">
         <h1>Booking Details</h1>
-        {bookingDetails.map((booking, index) => (
-          <div key={index} className="booking-card">
-            <p><strong>Name:</strong> {username}</p>
-            <p><strong>Team Name:</strong> {booking.teamName}</p>
-            <p><strong>Date:</strong> {booking.date}</p>
-            <p><strong>Time:</strong> {booking.time}</p>
-          </div>
-        ))}
+        <div className="booking-cards-container">
+          {bookingDetails.map((booking, index) => (
+            <div key={index} className="booking-card">
+              {booking.image && <img src={booking.image} alt="Booking" />}
+              <p><strong>Location:</strong>{booking.name}</p>
+              <p><strong>Name:</strong> {booking.username}</p>
+              <p><strong>Team Name:</strong> {booking.teamName}</p>
+              <p><strong>Date:</strong> {booking.date}</p>
+              <p><strong>Time:</strong> {booking.time}</p>
+              
+            </div>
+          ))}
+        </div>
       </div>
       <div className="home-button-container">
         <Link to='/home'>
@@ -57,4 +61,5 @@ const BookingDetails = () => {
     </div>
   );
 };
+
 export default BookingDetails;

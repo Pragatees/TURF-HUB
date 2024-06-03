@@ -1,11 +1,11 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(155, 29, 29, 0.2);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    width: 300px; /* Increase width */
-    height: 400px; /* Increase height */
+    width: 300px; /* Set fixed width */
+    height: 400px; /* Set fixed height */
     margin-bottom: 20px; /* Add some bottom margin for spacing */
 }
 
@@ -51,4 +51,70 @@
 
 .book-now-btn:hover {
     background-color: #45a049;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9b4343;
+}
+
+.middle {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Each row contains three columns */
+    gap: 20px;
+}
+
+#sidebar {
+    background-color: #000000;
+    color: #10ccda;
+    width: 200px;
+    height: 100vh;
+    float: left;
+    padding-top: 50px;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #dad9cc;
+}
+
+#sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#sidebar li:hover {
+    background-color: #53cf00;
+}
+
+#header {
+    background-color: #070000;
+    color: #c5f519;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#content {
+    display: flex;
+}
+
+#main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.search-box {
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 18px;
+    width: calc(100% - 240px); /* Adjust width considering the sidebar width */
 }

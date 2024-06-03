@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; // Import React and useState
 import axios from 'axios';
-import './slotchoose.css'; // Import your CSS file for styling
+import './slotchoose.css';
 
-const Footslot = ({ name }) => {
+const Footslot = (props) => { // Capitalize the component name
+  const { name, image } = props.location.state || {};
   const [teamName, setTeamName] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
-  const [selectedPaymentMode, setSelectedPaymentMode] = useState(''); // State for payment mode
-  const [error, setError] = useState(''); // State for error handling
+  const [error, setError] = useState('');
 
   const handleTeamNameChange = (e) => {
     setTeamName(e.target.value);
@@ -21,13 +21,9 @@ const Footslot = ({ name }) => {
     setSelectedTime(time);
   };
 
-  const handlePaymentModeChange = (e) => {
-    setSelectedPaymentMode(e.target.value);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const username = localStorage.getItem('username'); // Retrieve username from localStorage
+    const username = localStorage.getItem('username');
 
     if (!username) {
       setError('Username not found in local storage.');
@@ -39,20 +35,23 @@ const Footslot = ({ name }) => {
       teamName,
       selectedDate,
       selectedTime,
+      name,  
+      image  
     })
     .then(response => {
       alert("Booking Confirmed");
     })
     .catch(error => {
       console.error('There was an error making the booking:', error);
-      setError('An error occurred while making the booking.'); // Set error message
+      setError('An error occurred while making the booking.');
     });
   };
 
   return (
     <div className="cricslot-container">
-      <h3>{name}</h3> {/* Display the name passed as prop here */}
-      {error && <div className="error">{error}</div>} {/* Display error message if any */}
+      <h3>{name}</h3>
+      {image && <img src={image} alt={name} />}
+      {error && <div className="error">{error}</div>}
       <div className="input-box">
         <label htmlFor="teamName">Team Name:</label>
         <input
@@ -91,8 +90,7 @@ const Footslot = ({ name }) => {
             <input
               type="radio"
               value="gpay"
-              checked={selectedPaymentMode === 'gpay'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             GPay
           </label>
@@ -100,8 +98,7 @@ const Footslot = ({ name }) => {
             <input
               type="radio"
               value="phonepe"
-              checked={selectedPaymentMode === 'phonepe'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             PhonePe
           </label>
@@ -109,8 +106,7 @@ const Footslot = ({ name }) => {
             <input
               type="radio"
               value="paytm"
-              checked={selectedPaymentMode === 'paytm'}
-              onChange={handlePaymentModeChange}
+              name="paymentMode"
             />
             Paytm
           </label>

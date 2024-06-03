@@ -1,115 +1,141 @@
+/* General container styling */
 .cricslot-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-box {
-    margin-bottom: 20px;
-  }
-  
-  .input-box label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-box input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  .time-slots button {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #45a049;
-  }
-  .time-slots button {
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    background-color: #fbff06;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Added transition property */
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1; /* Ensures a square shape */
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial, sans-serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input box styling */
+.input-box {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-box input[type="text"],
+.input-box input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-box input[type="text"]:focus,
+.input-box input[type="date"]:focus {
+  border-color: #007bff;
+}
+
+/* Time slots button styling */
+.time-slots {
+  width: 100%;
+}
+
+.time-slots button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 12px 18px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+  font-size: 14px;
 }
 
 .time-slots button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .time-slots button:active {
-    transform: scale(0.95); /* Slightly scale down when button is clicked */
-}
-/* slotchoose.css */
-
-.input-box {
-  margin-bottom: 20px;
+  transform: scale(0.95);
 }
 
+/* Submit button styling */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Payment modes styling */
+.payment-modes label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.payment-modes input {
+  margin-right: 10px;
+}
+
+/* Select box styling */
 .select-box {
   width: 100%;
+  margin-bottom: 25px;
 }
 
 .select-box select {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   outline: none;
   font-size: 16px;
+  transition: border-color 0.3s;
 }
 
 .select-box select:focus {
   border-color: #007bff;
 }
 
-.submit-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+/* Error message styling */
+.error {
+  color: red;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
-.submit-button:hover {
-  background-color: #0056b3;
-}
-.payment-modes label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.payment-modes input {
-  margin-right: 5px;
+/* Image styling */
+.cricslot-container img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }

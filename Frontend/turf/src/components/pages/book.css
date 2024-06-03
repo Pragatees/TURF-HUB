@@ -1,75 +1,66 @@
-/* book.css */
+.background {
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  padding: 20px;
+}
 
 .booking-details-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .booking-details-container h1 {
-  text-align: center;
-  color: #343a40;
+  font-size: 28px;
   margin-bottom: 20px;
-  font-size: 2em;
+  color: #333;
+  text-align: center;
+}
+
+.booking-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
 }
 
 .booking-card {
-  background-color: #ffffff;
-  border: 1px solid #dee2e6;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width for each card */
 }
 
-.booking-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.booking-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 .booking-card p {
-  margin: 10px 0;
-  color: #495057;
+  margin: 5px 0;
 }
 
-.booking-card p strong {
-  color: #007bff;
-}
-.background {
-  background-color: #0e3d02;
-  padding: 20px 0;
-}
 .home-button-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.home-button-container a {
-  text-decoration: none;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .home-button {
+  padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .home-button:hover {
   background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.home-button:active {
-  background-color: #004085;
-  transform: translateY(0);
 }

@@ -92,7 +92,7 @@ app.listen(port, () => {
 
 
 app.post('/api/bookings', async (req, res) => {
-  const { username, teamName, selectedDate, selectedTime } = req.body;
+  const { username, teamName, selectedDate, selectedTime, name, image } = req.body;
 
   try {
     const newBooking = new Booking({
@@ -100,6 +100,8 @@ app.post('/api/bookings', async (req, res) => {
       teamName,
       date: selectedDate,
       time: selectedTime,
+      name, // include the name field
+      image, // include the image field
     });
 
     await newBooking.save();
@@ -109,6 +111,7 @@ app.post('/api/bookings', async (req, res) => {
     res.status(500).json({ message: 'Server error.' });
   }
 });
+
 
 
 
