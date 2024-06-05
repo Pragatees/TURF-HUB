@@ -120,19 +120,25 @@ function Home() {
   return (
     <div>
       <div id="sidebar">
+      <img
+          src="https://yt3.googleusercontent.com/ytc/AIdro_mHDZ7TUM7e7JEMZkHRfojLVMprFQeK47Uh0COySeCHoWo=s900-c-k-c0x00ffffff-no-rj"
+          alt="Logo"
+          className="sidebar-logo"
+          style={{ width: "100px", height: "100px", borderRadius: "50%", margin: "20px auto", display: "block" }}
+        />
         <nav className="custom-nav">
           <ul>
             <li>
-              <Link to="/home"> Home...🏠</Link>
+              <Link to="/home"><strong> Home...🏠</strong></Link>
             </li>
             <li>
-              <Link to="/profile">Profile...👤</Link>
+              <Link to="/profile"><strong>Profile...👤</strong></Link>
             </li>
             <li>
-              <Link to="/booking-details">BookingDetails</Link>
+              <Link to="/booking-details"><strong>BookingDetails</strong></Link>
             </li>
             <li>
-              <Link to="/">Log-Out</Link>
+              <Link to="/"><strong>Log-Out</strong></Link>
             </li>
           </ul>
         </nav>

@@ -47,11 +47,12 @@
 /* Time slots button styling */
 .time-slots {
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
 }
 
 .time-slots button {
-  margin-right: 10px;
-  margin-bottom: 10px;
   padding: 12px 18px;
   background-color: #4CAF50;
   color: #fff;

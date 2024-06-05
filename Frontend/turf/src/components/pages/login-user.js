@@ -35,7 +35,12 @@ const LoginPage = () => {
   return (
     <div className="login-background">
       <div className="login-box">
-        <img src="/path/to/your/image.jpg" alt="Login" className="login-image" />
+      <img
+          src="https://yt3.googleusercontent.com/ytc/AIdro_mHDZ7TUM7e7JEMZkHRfojLVMprFQeK47Uh0COySeCHoWo=s900-c-k-c0x00ffffff-no-rj"
+          alt="Logo"
+          className="sidebar-logo"
+          style={{ width: "100px", height: "100px", borderRadius: "50%", margin: "20px auto", display: "block" }}
+        />
         <h2>Login</h2>
         {error && <p className="error">{error}</p>}
         <form onSubmit={handleSubmit}> {/* Handle form submission */}

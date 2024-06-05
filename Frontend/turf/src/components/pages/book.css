@@ -33,6 +33,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px; /* Fixed width for each card */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .booking-card img {
@@ -40,10 +41,20 @@
   height: auto;
   margin-bottom: 20px;
   border-radius: 8px;
+  transition: transform 0.3s;
 }
 
 .booking-card p {
   margin: 5px 0;
+}
+
+.booking-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.booking-card:hover img {
+  transform: scale(1.1);
 }
 
 .home-button-container {
@@ -52,15 +63,33 @@
 }
 
 .home-button {
-  padding: 10px 20px;
+  padding: 8px 16px; /* Reduced padding */
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 14px; /* Reduced font size */
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .home-button:hover {
   background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Add a subtle animation to cards when they load */
+@keyframes card-entry {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.booking-card {
+  animation: card-entry 0.5s ease-in-out;
 }

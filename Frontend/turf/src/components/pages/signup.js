@@ -26,8 +26,15 @@ const SignupPage = () => {
 
   return (
     <div className="signup-background">
-        <div className='back'>
+        
+        
       <div className="signup-box">
+      <img
+          src="https://yt3.googleusercontent.com/ytc/AIdro_mHDZ7TUM7e7JEMZkHRfojLVMprFQeK47Uh0COySeCHoWo=s900-c-k-c0x00ffffff-no-rj"
+          alt="Logo"
+          className="sidebar-logo"
+          style={{ width: "100px", height: "100px", borderRadius: "50%", margin: "20px auto", display: "block" }}
+        />
         <h2>Sign Up</h2>
         {error && <p className="error">{error}</p>}
         <form onSubmit={handleSubmit}>
@@ -74,7 +81,7 @@ const SignupPage = () => {
           <button type="submit" onClick={handleSubmit}>Sign Up</button>
         </form>
         <p>Already have an account? <Link to='/'>Login</Link></p>
-      </div>
+      
       </div>
     </div>
   );
