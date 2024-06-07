@@ -20,7 +20,7 @@ const BookingDetails = () => {
         })
         .catch(error => {
           console.error('Error fetching booking details:', error);
-          setError('An error occurred while fetching booking details.');
+          setError('NO BOOKINGS');
         });
     } else {
       setError('Username not found in local storage.');

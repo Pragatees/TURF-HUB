@@ -1,34 +1,77 @@
-/* AboutUs.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
 
 .about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .about-header {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .about-content {
-    line-height: 1.6;
-  }
-  
-  .about-content p {
-    margin-bottom: 20px;
-  }
-  
-  /* Add animation for a subtle hover effect */
-  .about-content p:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 10px;
-    }
-  }
-  
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-title-container {
+  margin-bottom: 20px;
+}
+
+.about-title {
+  margin: 0;
+  color: #333;
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.thankyou-card {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+}
+
+.about-card h1 {
+  margin-bottom: 20px; /* Added margin to create space below the h1 tags */
+}
+
+.about-description {
+  margin-top: 10px;
+}
+
+.about-footer {
+  background-color: #52df00;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
