@@ -33,5 +33,5 @@ BACKEND :
 These are the steps and overview of the this project
 
 
-For more details see the pptx provide in this code
+For more details refer this pptx -> https://www.canva.com/design/DAGHFhgY3EA/Qp_VTsewI9sVmil1JN32Gg/edit?utm_content=DAGHFhgY3EA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
       
